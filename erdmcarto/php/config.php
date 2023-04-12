@@ -1,6 +1,6 @@
 <?php
 session_start();
-if((isset($_SESSION['user'])) and ($_SESSION['tipousuario'] ='1')){
+if((isset($_SESSION['user'])) and ($_SESSION['tipousuario'] == '1')){
     
     
     

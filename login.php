@@ -81,12 +81,12 @@ require "acnxerdm/cnx.php";
         
 			if($log){
                 
-                if($log['estado']=='1'){
-                    $_SESSION['tipousuario']='1';
-                }
-                if($log['estado']=='3'){
-                    $_SESSION['fichas']='3'; //sesion de fichasCatas
-                }
+
+                
+                
+//                if($log['estado']=='3'){
+//                    $_SESSION['fichas']='3'; //sesion de fichasCatas
+//                }
                 
                 
                 
@@ -132,7 +132,11 @@ require "acnxerdm/cnx.php";
                     })
                 </script>";
                 
-                if($log['rol']==NULL){
+                
+                if($log['estado']=='1'){
+                    $_SESSION['tipousuario']='1';
+                    echo '<meta http-equiv="refresh" content="1,url=erdmcarto/php/acceso.php">';
+                } else if($log['rol']==NULL){
                     $_SESSION['tipousuario']='visor';
                     echo '<meta http-equiv="refresh" content="1,url=erdmcarto/php/acceso.php">';
                 } else if($log['rol']=='visor'){

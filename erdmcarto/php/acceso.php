@@ -8,7 +8,7 @@ require "../../acnxerdm/cnx.php";
     $use=sqlsrv_query($cnx,$us);
     $user=sqlsrv_fetch_array($use);
     
-if(isset($_SESSION['tipousuario'])){
+if((isset($_SESSION['tipousuario'])) and ($_SESSION['tipousuario']=='1')){
     $ac="SELECT * FROM plaza";
     $acces=sqlsrv_query($cnx,$ac);
     $acceso=sqlsrv_fetch_array($acces);

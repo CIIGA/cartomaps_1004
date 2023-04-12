@@ -1,10 +1,11 @@
 <?php
 session_start();
-if((isset($_SESSION['user'])) and ($_SESSION['tipousuario'] == 'documentos') or ($_SESSION['user'] == 1) or ($_SESSION['user'] == 3) or ($_SESSION['user'] == 5)){
+if((isset($_SESSION['user'])) and ($_SESSION['tipousuario'] == 'documentos')){
 require "../../acnxerdm/cnx.php";
     
 //********************************lista de accesos**************************************
-    $idUsr=$_SESSION['user'];
+$idUsr=$_SESSION['user'];
+    
 if($_SESSION['user'] == 1){
     $ac="select * from documento";
     $acces=sqlsrv_query($cnx,$ac);
